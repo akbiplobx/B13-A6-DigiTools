@@ -6,6 +6,7 @@ function App() {
   return (
     <>
      <NavBar></NavBar>
+     <h1 className="text-4xl">hello</h1>
     </>
   )
 }
