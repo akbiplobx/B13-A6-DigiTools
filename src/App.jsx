@@ -1,6 +1,7 @@
 import Banner from "./component/Banner"
 import GetStarted from "./component/GetStarted"
 import NavBar from "./component/NavBar"
+import Pricing from "./component/Pricing"
 import StatsSection from "./component/StatsSection"
 
 function App() {
@@ -11,8 +12,9 @@ function App() {
      <NavBar></NavBar>
      <Banner></Banner>
      <StatsSection></StatsSection>
-     
+
      <GetStarted></GetStarted>
+     <Pricing></Pricing>
     </>
   )
 }
