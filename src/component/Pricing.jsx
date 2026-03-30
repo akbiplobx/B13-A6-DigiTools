@@ -48,7 +48,7 @@ const Pricing = () => {
               key={index}
               className={`relative flex flex-col p-8 rounded-3xl transition-all duration-300 ${
                 plan.isPopular 
-                ? "bg-[#7C3AED] text-white shadow-2xl scale-105 z-10" 
+                ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-2xl scale-105 z-10" 
                 : "bg-white text-slate-900 border border-slate-100 shadow-sm"
               }`}
             >
@@ -89,7 +89,7 @@ const Pricing = () => {
               <button className={`w-full py-4 rounded-4xl font-bold transition-all ${
                 plan.isPopular 
                 ? "bg-white text-[#7C3AED] hover:bg-purple-50" 
-                : "bg-[#7C3AED] text-white hover:bg-purple-700"
+                : "bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:bg-purple-700"
               }`}>
                 {plan.buttonText}
               </button>
