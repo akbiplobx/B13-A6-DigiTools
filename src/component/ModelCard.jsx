@@ -2,21 +2,21 @@ import { toast } from "react-toastify";
 
 const ModelCard = ({ model, carts, setCarts }) => {
   
-  // src/assets 
+  
+  const isAlreadyInCart = carts.find((item) => item.id === model.id);
+
   const getImageUrl = (name) => {
     return new URL(`../assets/${name}`, import.meta.url).href;
   };
 
   const handleAddToCart = () => {
-    const isFound = carts.find((item) => item.id === model.id);
-
-    if (isFound) {
-      toast.error("Item Added Before");
+    if (isAlreadyInCart) {
+      toast.error("Item Already Added");
       return;
     }
 
     setCarts([...carts, model]);
-    toast.success("Item Added Successful");
+    toast.success("Item Added Successfully");
   };
 
   return (
@@ -35,7 +35,6 @@ const ModelCard = ({ model, carts, setCarts }) => {
       )}
 
       <div>
-        {/* getImageUrl  */}
         <div className="mb-6">
           <img 
             className="h-6 w-6 object-contain" 
@@ -44,17 +43,14 @@ const ModelCard = ({ model, carts, setCarts }) => {
           />
         </div>
 
-        {/* Title & Description */}
         <h2 className="text-2xl font-bold text-zinc-800 mb-3">{model.name}</h2>
         <p className="text-zinc-500 mb-6 leading-relaxed">{model.description}</p>
 
-        {/* Price & Period */}
         <div className="mb-6">
           <span className="text-3xl font-bold text-zinc-900">${model.price}</span>
           <span className="text-zinc-500 text-lg">/{model.period}</span>
         </div>
 
-        {/* Features List */}
         <ul className="space-y-3 mb-8">
           {model.features.map((feature, index) => (
             <li key={index} className="flex items-center text-zinc-600">
@@ -67,12 +63,17 @@ const ModelCard = ({ model, carts, setCarts }) => {
         </ul>
       </div>
 
-      {/* Buy Now Button */}
+      {/* conditional btn */}
       <button
         onClick={handleAddToCart}
-        className="btn w-full bg-[#7C3AED] hover:bg-[#6D28D9] text-white border-none rounded-xl normal-case text-lg h-14"
+        disabled={isAlreadyInCart}
+        className={`btn w-full border-none rounded-xl normal-case text-lg h-14 transition-colors duration-300 text-white ${
+          isAlreadyInCart 
+            ? "bg-green-600 hover:bg-green-700 cursor-not-allowed" 
+            : "bg-[#7C3AED] hover:bg-[#6D28D9]"
+        }`}
       >
-        Buy Now
+        {isAlreadyInCart ? "Added to Cart" : "Buy Now"}
       </button>
     </div>
   );
