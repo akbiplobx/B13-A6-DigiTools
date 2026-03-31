@@ -1,6 +1,4 @@
 🚀 DigiTools – Premium Digital Marketplace
-<p align="center"> <img src="src/assets/banner-preview.png" alt="DigiTools Banner" width="800"> </p> <p align="center">
-
 A modern digital marketplace for discovering and managing premium tools.
 
 </p>
