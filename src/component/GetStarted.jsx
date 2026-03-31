@@ -1,5 +1,3 @@
-import React from 'react';
-
 import createAccImg from '../assets/user.png'; 
 import chooseProductImg from '../assets/package.png';
 import startCreatingImg from '../assets/rocket.png';

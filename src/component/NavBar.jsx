@@ -1,12 +1,7 @@
-import React, { useState } from 'react';
-// cart icon
 import cartIconImg from '../assets/shopping-cart.png';
 
-const Navbar = () => {
-  // cart item state
-  const [cartCount, setCartCount] = useState(0);
-
-  // menu item array
+const Navbar = ({ carts }) => {
+  
   const navLinks = [
     { name: 'Products', href: '#' },
     { name: 'Features', href: '#' },
@@ -20,11 +15,9 @@ const Navbar = () => {
       {/* logo section */}
       <div className="navbar-start">
         <a className="flex items-center gap-2 cursor-pointer">
-          {/*  user.png  */}
-          
           <span className="text-4xl p-1 font-bold tracking-tight bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-      DigiTools
-    </span>
+            DigiTools
+          </span>
         </a>
       </div>
 
@@ -45,21 +38,19 @@ const Navbar = () => {
       <div className="navbar-end gap-3.5">
         {/* cart icon section */}
         <div className="dropdown dropdown-end">
-          <button 
-            onClick={() => setCartCount(cartCount + 1)} 
-            className="btn btn-ghost btn-circle"
-          >
+          <button className="btn btn-ghost btn-circle">
             <div className="indicator">
-              {/*cart img */}
               <img 
                 src={cartIconImg} 
                 alt="Shopping Cart" 
                 className="h-8 w-8 object-contain" 
               />
-              {/* number/bdg */}
-              <span className="badge badge-sm indicator-item badge-primary text-white border-none py-1.5 px-1 font-semibold">
-                {cartCount}
-              </span>
+              {/* carts.length */}
+              {carts?.length > 0 && (
+                <span className="badge badge-sm indicator-item badge-error text-white border-none py-1.5 px-1 font-semibold">
+                  {carts.length}
+                </span>
+              )}
             </div>
           </button>
         </div>
@@ -77,7 +68,9 @@ const Navbar = () => {
         {/* Responsive */}
         <div className="dropdown dropdown-end lg:hidden">
           <label tabIndex={0} className="btn btn-ghost btn-circle">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
           </label>
           <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2.5 shadow-xl bg-base-100 rounded-box w-60 border">
             {navLinks.map((link) => (

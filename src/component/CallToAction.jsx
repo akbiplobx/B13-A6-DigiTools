@@ -1,5 +1,3 @@
-import React from 'react';
-
 const CallToAction = () => {
   return (
     <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-24 px-6 md:px-12 my-16 shadow-2xl shadow-purple-100/50">

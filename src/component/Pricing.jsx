@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Pricing = () => {
   const plans = [
     {
@@ -86,7 +84,7 @@ const Pricing = () => {
               </ul>
 
               {/* Action Button */}
-              <button className={`w-full py-4 rounded-4xl font-bold transition-all ${
+              <button className={`w-full py-4 rounded-4xl cursor-pointer font-bold transition-all ${
                 plan.isPopular 
                 ? "bg-white text-[#7C3AED] hover:bg-purple-50" 
                 : "bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:bg-purple-700"
