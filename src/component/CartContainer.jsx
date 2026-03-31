@@ -20,6 +20,7 @@ const CartContainer = ({ carts, handleRemove, setCarts }) => {
 
       {carts.length === 0 ? (
         <div className="text-center py-20 bg-zinc-50 rounded-3xl border-2 border-dashed border-zinc-200">
+          <i class="fa-solid fa-cart-arrow-down text-5xl mb-2 text-zinc-500"></i>
           <p className="text-zinc-500 text-xl font-medium">Your Cart is Empty</p>
         </div>
       ) : (
