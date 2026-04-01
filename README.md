@@ -1,75 +1,29 @@
-🚀 DigiTools – Premium Digital Marketplace
-A modern digital marketplace for discovering and managing premium tools.
+DigiTools – Digital Marketplace
+A clean and modern marketplace to discover and manage premium digital tools.
+Live Site: https://b13-a6-digitools-biplob.netlify.app/ GitHub: https://github.com/akbiplobx/B13-A6-DigiTools
 
-</p>
-🌐 Live Links
-
-🔗 Live Site
-https://b13-a6-digitools-biplob.netlify.app/
-
-🔗 GitHub Repository
-https://github.com/akbiplobx/B13-A6-DigiTools
-
-📌 Project Overview
-
-DigiTools is a modern digital marketplace where users can explore premium digital tools such as AI writing assistants, design resources, and developer utilities.
-
-The goal of this project is to build a fast, interactive, and user-friendly application using modern frontend technologies like React, Tailwind CSS, and DaisyUI.
-
-Users can browse digital tools, add them to their cart, and manage their selections with instant UI updates.
-
-🛠️ Technologies Used
-
-This project is built with modern frontend tools and frameworks:
-
-⚛️ React.js – Component-based UI development
-🎨 Tailwind CSS – Utility-first CSS framework for responsive design
-🌼 DaisyUI – Beautiful pre-built Tailwind components
-🔔 React Toastify – Notification system for user feedback
-⚡ Vite – Fast build tool and development server
-✨ Key Features
-🛒 Smart Cart Management
-
-Users can add digital tools to the cart and the system automatically prevents duplicate items using unique IDs. The cart counter updates instantly in the Navbar.
-
-🔄 Tab-Based Navigation
-
-The interface allows users to switch between Products and Cart using React's conditional rendering without reloading the page.
-
-💰 Dynamic Price Calculation
-
-The cart automatically calculates the total price of all selected tools using JavaScript’s reduce() method.
-
-📂 Project Setup
-
-Follow these steps to run the project locally.
-
-1️⃣ Clone the Repository
+What is DigiTools?
+DigiTools is a digital marketplace where you can discover digital tools such as AI writing tools, design tools, and development tools, etc. The main idea was to build a digital marketplace, fast and easy to use, where users can discover tools, add them to a cart, and manage them without any page reload.
+  
+Built With
+I use React.js to build UI with reusable components.
+I use Tailwind CSS for responsive and utility-based styling.
+I use DaisyUI for ready-made UI components.
+I use React Toastify for toast notification.
+I use Vite for fast development and build tools.
+  
+Features
+Cart Management – Users can add tools to the cart.
+Duplicate tools are blocked.
+Cart counter in navbar updates instantly.
+Tab-Based Navigation – Users can navigate from Product to Cart and vice versa.
+No page reload occurs.
+Price Calculation – Cart adds up prices of tools instantly.
+  
+Run Locally
 git clone https://github.com/akbiplobx/B13-A6-DigiTools.git
-2️⃣ Navigate to the Project Folder
 cd B13-A6-DigiTools
-3️⃣ Install Dependencies
 npm install
-4️⃣ Run the Development Server
 npm run dev
 
-Now open the local server link in your browser.
-
-📸 Project Preview
-<p align="center"> <img src="src/assets/banner-preview.png" width="700"> </p>
-📈 Future Improvements
-
-Some features that can be added in the future:
-
-User authentication system
-Payment gateway integration
-Product search & filtering
-Wishlist functionality
-👨‍💻 Author
-
-A K Biplob
-
-💻 Frontend Developer
-🌐 Passionate about building modern web applications.
-
-⭐ If you like this project, consider giving it a star on GitHub.
+Copyright by A K Biplob
