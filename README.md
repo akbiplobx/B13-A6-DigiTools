@@ -1,6 +1,8 @@
 DigiTools – Digital Marketplace
 A clean and modern marketplace to discover and manage premium digital tools.
-Live Site: https://b13-a6-digitools-biplob.netlify.app/ GitHub: https://github.com/akbiplobx/B13-A6-DigiTools
+
+Live Site: https://b13-a6-digitools-biplob.netlify.app/ 
+GitHub: https://github.com/akbiplobx/B13-A6-DigiTools
 
 What is DigiTools?
 DigiTools is a digital marketplace where you can discover digital tools such as AI writing tools, design tools, and development tools, etc. The main idea was to build a digital marketplace, fast and easy to use, where users can discover tools, add them to a cart, and manage them without any page reload.
